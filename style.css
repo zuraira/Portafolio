@@ -1,0 +1,254 @@
+/* =========================================
+   ESTILO CYBERPUNK // NEON MATRIX
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace, system-ui, sans-serif;
+}
+
+html, body {
+    background-color: #05050a !important;
+    background-image: 
+        linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    color: #e0e6ed;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgba(5, 5, 10, 0.9);
+    border-bottom: 2px solid #00f0ff;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.logo .highlight {
+    color: #ff0055;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #00f0ff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #ffe600;
+    text-shadow: 0 0 8px #ffe600;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 100vh;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 130px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+}
+
+/* STATUS BADGE */
+.badge-disponible {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 14px;
+    background: rgba(0, 240, 255, 0.05);
+    border: 1px solid #00f0ff;
+    color: #00f0ff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+}
+
+.punto-neon {
+    width: 8px;
+    height: 8px;
+    background-color: #ff0055;
+    box-shadow: 0 0 10px #ff0055;
+}
+
+/* ENCABEZADOS Y TÍTULO */
+.hero-header h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 2px 2px 0px #ff0055, -2px -2px 0px #00f0ff;
+    letter-spacing: 2px;
+}
+
+.role-title {
+    color: #ffe600;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 5px;
+    text-shadow: 0 0 8px rgba(255, 230, 0, 0.4);
+}
+
+.hero-bio {
+    font-size: 1.05rem;
+    color: #a0a5b5;
+    max-width: 680px;
+    border-left: 3px solid #ff0055;
+    padding-left: 15px;
+}
+
+/* TAGS CYBERPUNK */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color: #0d0d1a;
+}
+
+.tag-cyan {
+    border: 1px solid #00f0ff;
+    color: #00f0ff;
+}
+
+.tag-pink {
+    border: 1px solid #ff0055;
+    color: #ff0055;
+}
+
+.tag-yellow {
+    border: 1px solid #ffe600;
+    color: #ffe600;
+}
+
+/* BOTONES CON ESQUINAS CORTADAS */
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-cyber {
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+    clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+}
+
+.btn-cyber.primary {
+    background-color: #ff0055;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.5);
+}
+
+.btn-cyber.primary:hover {
+    background-color: #00f0ff;
+    color: #05050a;
+    box-shadow: 0 0 20px #00f0ff;
+}
+
+.btn-cyber.secondary {
+    background-color: transparent;
+    color: #00f0ff;
+    border: 1px solid #00f0ff;
+}
+
+.btn-cyber.secondary:hover {
+    background-color: rgba(0, 240, 255, 0.1);
+    color: #ffe600;
+    border-color: #ffe600;
+}
+
+/* SECCIONES SECUNDARIAS */
+.seccion {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    border-top: 1px dashed #00f0ff;
+}
+
+.seccion h2 {
+    font-size: 1.6rem;
+    color: #00f0ff;
+    margin-bottom: 15px;
+}
+
+.seccion p {
+    color: #808595;
+}
+
+/* ENLACE GITHUB BARRA SUPERIOR */
+.github-link-top {
+    color: #00f0ff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.github-link-top:hover {
+    color: #ff0055;
+    text-shadow: 0 0 8px #ff0055;
+}
+
+/* TARJETA DE CONTACTO CYBERPUNK */
+.contact-card {
+    margin-top: 25px;
+    padding: 25px;
+    background-color: #0d0d1a;
+    border: 1px solid #00f0ff;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    clip-path: polygon(0 0, 95% 0, 100% 25%, 100% 100%, 5% 100%, 0 75%);
+}
+
+.contact-info p {
+    color: #a0a5b5;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.contact-info strong {
+    color: #ffe600;
+}
