@@ -130,6 +130,7 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    margin: 4px 0;
 }
 
 .tag {
@@ -137,6 +138,7 @@ html, body {
     font-size: 0.8rem;
     font-weight: bold;
     background-color: #0d0d1a;
+    display: inline-block;
 }
 
 .tag-cyan {
@@ -154,7 +156,7 @@ html, body {
     color: #ffe600;
 }
 
-/* BOTONES CON ESQUINAS CORTADAS */
+/* BOTONES */
 .hero-actions {
     display: flex;
     gap: 15px;
@@ -162,10 +164,13 @@ html, body {
 }
 
 .btn-cyber {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 12px 24px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     letter-spacing: 1px;
     transition: all 0.2s ease;
     clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
@@ -206,11 +211,56 @@ html, body {
 .seccion h2 {
     font-size: 1.6rem;
     color: #00f0ff;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
-.seccion p {
-    color: #808595;
+/* TARJETAS DE PROYECTOS (ESTRUCTURA CORREGIDA) */
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.project-card {
+    background-color: #0a0d16;
+    border: 1px solid #1e293b;
+    border-left: 4px solid #ff0055;
+    padding: 28px;
+    box-shadow: 0 0 20px rgba(255, 0, 85, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: #00f0ff;
+    border-left-color: #00f0ff;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+.project-badge {
+    color: #ffe600;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.project-title {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-top: 4px;
+}
+
+.project-desc {
+    color: #a0a5b5;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.project-actions {
+    margin-top: 8px;
+    display: flex;
 }
 
 /* ENLACE GITHUB BARRA SUPERIOR */
@@ -230,17 +280,17 @@ html, body {
 
 /* TARJETA DE CONTACTO CYBERPUNK */
 .contact-card {
-    margin-top: 25px;
+    margin-top: 15px;
     padding: 25px;
-    background-color: #0d0d1a;
+    background-color: #0a0d16;
     border: 1px solid #00f0ff;
+    border-left: 4px solid #00f0ff;
     box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    clip-path: polygon(0 0, 95% 0, 100% 25%, 100% 100%, 5% 100%, 0 75%);
 }
 
 .contact-info p {
@@ -250,5 +300,73 @@ html, body {
 }
 
 .contact-info strong {
+    color: #ffe600;
+}
+/* SECCIÓN DE INTERESES */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.interest-card {
+    background-color: #0a0d16;
+    border: 1px solid #1e293b;
+    border-top: 3px solid #00f0ff;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.interest-card:hover {
+    border-top-color: #ff0055;
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.15);
+    transform: translateY(-3px);
+}
+
+.interest-title {
+    color: #ffe600;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.interest-card p {
+    color: #a0a5b5;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* RETOCES A LA MALA DE CONTACTO */
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+button.btn-cyber {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* ESTILOS PARA LA SECCIÓN SOBRE MÍ */
+.about-card {
+    background-color: #0a0d16;
+    border: 1px solid #1e293b;
+    border-left: 4px solid #00f0ff;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about-text {
+    color: #a0a5b5;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.about-text strong {
     color: #ffe600;
 }
